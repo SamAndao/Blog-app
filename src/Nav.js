@@ -12,7 +12,7 @@ const Nav = ({ search, setSearch }) => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <NavLink to="/">
+      <NavLink to="/Blog-app">
         <NavButton buttonName="Home" />
       </NavLink>
       <NavLink to="newpost">

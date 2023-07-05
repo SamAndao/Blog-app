@@ -105,7 +105,7 @@ function App() {
       <Router>
         <Routes>
           <Route
-            path="/"
+            path="/Blog-app"
             element={<RootLayout search={search} setSearch={setSearch} />}
           >
             <Route
