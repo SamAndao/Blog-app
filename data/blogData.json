@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with React",
+    "datePosted": "2023-06-01",
+    "timePosted": "14:30",
+    "blogText": "In this blog post, we will explore the basics of React and how to get started with building web applications using React."
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Machine Learning",
+    "datePosted": "2023-05-28",
+    "timePosted": "10:15",
+    "blogText": "In this blog post, we will introduce the fundamental concepts of machine learning and discuss its applications in various fields."
+  },
+  {
+    "id": 3,
+    "title": "JavaScript Best Practices",
+    "datePosted": "2023-05-22",
+    "timePosted": "16:45",
+    "blogText": "Learn about the best practices to follow when writing JavaScript code to ensure clean, maintainable, and efficient applications."
+  },
+  {
+    "id": 4,
+    "title": "Python Tips and Tricks",
+    "datePosted": "2023-05-18",
+    "timePosted": "09:00",
+    "blogText": "Discover useful tips and tricks to improve your Python programming skills and write more concise and effective code."
+  },
+  {
+    "id": 5,
+    "title": "HTML and CSS Fundamentals",
+    "datePosted": "2023-05-12",
+    "timePosted": "14:00",
+    "blogText": "Master the foundational concepts of HTML and CSS to build beautiful and responsive web pages."
+  },
+  {
+    "id": 6,
+    "title": "Database Design Principles",
+    "datePosted": "2023-05-08",
+    "timePosted": "11:30",
+    "blogText": "Learn about the principles and best practices for designing efficient and scalable databases."
+  }
+]
