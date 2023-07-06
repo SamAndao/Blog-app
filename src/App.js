@@ -74,7 +74,11 @@ function App() {
   const [postContent, setPostContent] = useState("");
   const [search, setSearch] = useState("");
 
-  useEffect(() => {}, [search]);
+  useEffect(() => {
+    const newArr = [...blogData].reverse();
+    setBlogData(newArr);
+    // eslint-disable-next-line
+  }, []);
 
   const handleSubmitPost = (e) => {
     e.preventDefault();
@@ -89,7 +93,7 @@ function App() {
     });
 
     const newBlogPost = {
-      id: blogData.length > 0 ? blogData[blogData.length - 1].id + 1 : 1,
+      id: blogData.length > 0 ? blogData[0].id + 1 : 1,
       title: postTitle,
       datePosted: formattedDate,
       timePosted: formattedTime,
@@ -137,7 +141,10 @@ function App() {
                 />
               }
             />
-            <Route path="posts" element={<PostPage />} />
+            <Route
+              path="posts/:id"
+              element={<PostPage blogData={blogData} />}
+            />
             <Route path="*" element={<Missing />} />
           </Route>
         </Routes>

@@ -101,7 +101,8 @@ main {
   width: 100%;
   max-width: 1400px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .blogItem {
@@ -199,4 +200,27 @@ a {
 .missing > *:first-child {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.postContainer {
+  width: 800px;
+}
+
+.postHeading {
+  margin-bottom: 30px;
+}
+
+.postContainer h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color:rgba(94, 94, 94, 0.894);
+  margin-bottom: 100px;
+}
+
+.postText {
+  font-family: monospace;
+  font-size: 18px;
+  text-align: justify;
+  text-indent: 50px;
+
 }

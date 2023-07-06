@@ -30,7 +30,14 @@ const NewPost = ({
           className="post-input"
           placeholder="Put your blog here"
           value={postContent}
-          onChange={(e) => setPostContent(e.target.value)}
+          onChange={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault(); // Prevent the default behavior of Enter key in a textarea
+              setPostContent(() => e.target.value + "\n"); // Append a newline character
+            } else {
+              setPostContent(e.target.value);
+            }
+          }}
           required
         />
         <button className="btn" type="submit">
