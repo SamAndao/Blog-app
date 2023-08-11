@@ -5,6 +5,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  position: relative;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +34,7 @@ code {
   padding: 0 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
 }
 
@@ -83,10 +88,11 @@ code {
   font-size: 18px;
   transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1); 
   font-family: "Courier New";
+  word-spacing: -7px;
 }
 
 .nav-button:hover {
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(44, 44, 44);
 
 }
 
@@ -105,8 +111,14 @@ main {
   flex-direction: column;
 }
 
+ul {
+  max-width: 900px;
+}
+
 .blogItem {
-  height: 125px;
+  width: 900px;
+  
+  min-height: 125px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -149,9 +161,10 @@ a {
   margin-bottom: 10px;
 }
 
-.title-label {
+label {
   font-weight: 600;
 }
+
 .title-input {
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
@@ -162,9 +175,7 @@ a {
   padding: 10px;
   font-family: monospace;
 }
-.post-label {
-  font-weight: 600;
-}
+
 .post-input {
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
@@ -185,9 +196,28 @@ a {
   border: 2px solid black;
   border-radius: 5px;
   transition: all .25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
 }
 .btn:active {
   background-color: rgb(105, 201, 169);
+}
+
+.delete {
+  background-color: rgb(255, 67, 82);
+}
+
+.delete:hover{
+  background-color: rgb(255, 89, 103);
+}
+
+.edit {
+  background-color: rgb(255, 255, 173);
+  margin-right:10px;
+}
+
+.edit:hover {
+  background-color: rgb(245, 245, 212);
+
 }
 
 .missing {
@@ -207,6 +237,11 @@ a {
 }
 
 .postHeading {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.postUser {
   margin-bottom: 30px;
 }
 
@@ -214,7 +249,7 @@ a {
   font-size: 18px;
   font-weight: 600;
   color:rgba(94, 94, 94, 0.894);
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 .postText {
@@ -222,5 +257,141 @@ a {
   font-size: 18px;
   text-align: justify;
   text-indent: 50px;
+  margin-bottom: 20px;
+}
 
+
+.register, .login {
+ width: 400px;
+}
+
+.register h1, .login h1 {
+
+  margin-bottom: 20px;
+}
+
+.register__form, .login__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.register__form input, .login__form input{
+  width: 100%;
+  height: 30px;
+  font-family: monospace;
+  padding: 4px;
+  font-size: 16px
+}
+
+.login__form input{
+  margin-bottom: 25px;
+}
+
+.register__form label, .login__form label{
+  font-size: 18px;
+}
+
+.register__form-input--status {
+  height: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-top: 0;
+  font-size: 13px;
+  display: inline-block;
+  font-family:  monospace;
+  word-spacing: -3px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.required {
+  color: orange;
+}
+
+.button-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  height: 70px;
+  width: 400px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(173, 173, 173);
+  transition: .3s ease-in-out;
+  opacity: 1;
+}
+
+.notification--success {
+  background-color:  rgb(214, 244, 217);
+}
+
+.notification--failed {
+  background-color:  rgb(255, 209, 209);
+}
+
+.notification h5 {
+  font-size: 17px;
+
+}
+
+.notification--hidden {
+
+  left: -200px;
+  opacity: 0;
+}
+
+.notification p {
+  font-size: 16px;
+}
+
+.notification__close-button{
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: .7;
+  transition: .3s;
+}
+
+.notification__close-button:hover {
+  opacity: 1;
+}
+
+.user-page__username {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.user-page {
+  max-width: 900px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.about-page {
+  width: 900px
 }
