@@ -14,6 +14,8 @@ import Login from "./features/auth/Login";
 import Missing from "./components/Missing";
 import PostPage from "./features/posts/PostPage";
 import UserPage from "./features/users/UserPage";
+import EditPost from "./features/posts/EditPost";
+import Search from "./components/Search";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -55,8 +57,10 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="register" element={<Register />} />
             <Route path="login" element={<Login />} />
+            <Route path="search" element={<Search />} />
             <Route path="post/:id" element={<PostPage />} />
             <Route path="user/:id" element={<UserPage />} />
+            <Route path="edit-post/:id" element={<EditPost />} />
             <Route path="*" element={<Missing />} />
           </Route>
         </Routes>

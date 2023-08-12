@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Missing from "../../components/Missing";
 import { useParams, useNavigate } from "react-router-dom";
 import { useGetPostQuery } from "../api/apiSlice";
@@ -17,6 +17,8 @@ const PostPage = () => {
   const { data: post, isSuccess, isLoading } = useGetPostQuery(id);
   const { userId } = useSelector((state) => state.auth);
   const [deletePost, { isError }] = useDeletePostMutation();
+
+  const [deleteClass, setDeleteClass] = useState("confirmation--hidden");
 
   let content;
 
@@ -40,7 +42,9 @@ const PostPage = () => {
     }
   };
 
-  // const handleEdit = async () => {};
+  const handleEdit = async () => {
+    navigate(`/Blog-app/edit-post/${id}`);
+  };
 
   if (isSuccess) {
     content = (
@@ -65,12 +69,28 @@ const PostPage = () => {
         ))}
         {userId === post.userId ? (
           <div className="button-container">
-            <button className="edit btn">Edit</button>
-            <button className="delete btn" onClick={() => handleDelete()}>
+            <button className=" btn edit" onClick={() => handleEdit()}>
+              Edit
+            </button>
+            <button className="btn delete" onClick={() => setDeleteClass(null)}>
               Delete
             </button>
           </div>
         ) : null}
+        <div className={`confirmation ${deleteClass}`}>
+          <div className="confirmation--inner">
+            <h3>Are you sure to delete?</h3>
+            <button
+              className="btn btn-cancel"
+              onClick={() => setDeleteClass("confirmation--hidden")}
+            >
+              Cancel
+            </button>
+            <button className="btn btn-delete" onClick={() => handleDelete()}>
+              Delete
+            </button>
+          </div>
+        </div>
       </>
     );
   } else if (isLoading) content = <h1>Loading...</h1>;

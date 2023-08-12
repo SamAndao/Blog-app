@@ -12,17 +12,14 @@ const About = () => {
         <span className="bold">Use of email:</span>
       </p>
       <p>
-        The email is a way to reset the password of a user (working in progrss)
+        The email used to reset the password of a user (working in progress)
       </p>
       <br />
       <br />
       <p>
         <span className="bold">Site notes:</span>
       </p>
-      <p>
-        This site is fully functional and there are features to be added in the
-        future.
-      </p>
+      <p>New features coming soon!</p>
       <br />
       <br />
       <br />
@@ -44,13 +41,13 @@ const About = () => {
         </a>
       </p>
       <br />
-      <p>
+      {/* <p>
         If you appreciate my work, feel free to check out my GitHub profile,{" "}
         <a href="https://github.com/YourGitHubUsername" className="link">
           SamAndao
         </a>
         .
-      </p>
+      </p> */}
     </div>
   );
 };

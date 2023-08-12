@@ -44,6 +44,7 @@ export const apiSlice = createApi({
     }),
     getPost: builder.query({
       query: (id) => `posts/${id}`,
+      providesTags: ["Post"],
     }),
     getUser: builder.query({
       query: (id) => ({
@@ -89,6 +90,12 @@ export const apiSlice = createApi({
         }
       },
     }),
+    searchUsers: builder.query({
+      query: (searchItem) => `user/searchUsers/?value=${searchItem}`,
+    }),
+    searchPosts: builder.query({
+      query: (searchItem) => `posts/searchPosts/?value=${searchItem}`,
+    }),
     createNewPost: builder.mutation({
       query: (post) => ({
         url: "/posts",
@@ -102,6 +109,14 @@ export const apiSlice = createApi({
         url: "/posts",
         method: "DELETE",
         body: { postId },
+      }),
+      invalidatesTags: ["Post"],
+    }),
+    updatePost: builder.mutation({
+      query: (postInfo) => ({
+        url: "/posts",
+        method: "PATCH",
+        body: { ...postInfo },
       }),
       invalidatesTags: ["Post"],
     }),
@@ -119,8 +134,11 @@ export const {
   useLoginMutation,
   useSendLogoutMutation,
   useRegisterMutation,
+  useSearchPostsQuery,
+  useSearchUsersQuery,
   useCheckUsernameMutation,
   useCreateNewPostMutation,
   useDeletePostMutation,
+  useUpdatePostMutation,
   useRefreshQuery,
 } = apiSlice;

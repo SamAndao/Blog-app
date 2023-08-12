@@ -36,7 +36,7 @@ const NewPost = () => {
       }, 5000);
       if (isError)
         return dispatch(
-          setFailed({ message: "An error has occured while uploading" })
+          setFailed({ message: "An error has occured while creating post" })
         );
       setPostContent("");
       setPostTitle("");

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useGetUserQuery, useGetUserPostsQuery } from "../api/apiSlice";
+import { useMemo } from "react";
 import { useParams } from "react-router-dom";
 const UserPage = () => {
   const { id } = useParams();
@@ -9,6 +10,11 @@ const UserPage = () => {
   const { data: user, isLoading: loadingUser } = useGetUserQuery(id);
 
   console.log(posts);
+
+  const postData = useMemo(() => {
+    const unsorted = posts.slice();
+    return unsorted.sort((a, b) => b.date.localeCompare(a.date));
+  }, [posts]);
 
   const PostExcerpt = ({ post }) => {
     return (
@@ -42,7 +48,7 @@ const UserPage = () => {
         <h1 className="user-page__username">{user.username}</h1>
         <h2 className="user-page__subhead">All posts:</h2>
         <ul>
-          {posts.map((post) => {
+          {postData.map((post) => {
             return <PostExcerpt post={post} key={post._id} />;
           })}
         </ul>

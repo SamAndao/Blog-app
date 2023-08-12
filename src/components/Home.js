@@ -40,7 +40,7 @@ const Home = () => {
   if (isSuccess) {
     content = (
       <>
-        <h1 className="user-page__username">Home</h1>
+        <h1 className="home-heading">Home</h1>
         <ul>
           {postData.map((post) => {
             return <PostExcerpt post={post} key={post._id} />;

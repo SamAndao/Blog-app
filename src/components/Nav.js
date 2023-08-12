@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import NavButton from "./NavButton";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Nav = ({ search, setSearch }) => {
+const Nav = () => {
+  const navigate = useNavigate();
   const { username, userId } = useSelector((state) => state.auth);
+  const [search, setSearch] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/Blog-app/search?value=${search}`);
+  };
 
   return (
     <nav className="nav">
-      <input
-        type="text"
-        className="nav-input"
-        placeholder="Search Posts"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <form onSubmit={(e) => handleSearch(e)} className="nav-form">
+        <input
+          type="text"
+          className="nav-input"
+          placeholder="Search posts or users"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button className="nav-search">
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
       <NavLink to="">
         <NavButton buttonName="Home" />
       </NavLink>
