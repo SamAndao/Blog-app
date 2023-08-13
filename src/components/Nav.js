@@ -10,7 +10,7 @@ const Nav = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/Blog-app/search?value=${search}`);
+    navigate(`/search?value=${search}`);
   };
 
   return (

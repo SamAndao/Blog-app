@@ -9,7 +9,7 @@ const NavButton = ({ buttonName }) => {
 
   const handleLogout = async () => {
     await sendLogout();
-    navigate("/Blog-app");
+    navigate("/");
   };
 
   const logout = buttonName === "Logout" ? () => handleLogout() : null;

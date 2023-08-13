@@ -36,7 +36,7 @@ const Login = () => {
       dispatch(setToken({ accessToken }));
       dispatch(setCredentials({ username, userId }));
 
-      navigate("/Blog-app");
+      navigate("/");
     } catch (error) {}
   };
 

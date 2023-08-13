@@ -51,7 +51,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/Blog-app" element={<RootLayout />}>
+          <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
             <Route path="new-post" element={<NewPost />} />
             <Route path="about" element={<About />} />

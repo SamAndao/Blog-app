@@ -40,7 +40,7 @@ const NewPost = () => {
         );
       setPostContent("");
       setPostTitle("");
-      navigate("/Blog-app");
+      navigate("/");
       dispatch(setSuccess({ message: "New post has been created" }));
     } catch (err) {
       setMessage(`An error has occured: ${err}`);

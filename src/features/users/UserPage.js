@@ -19,7 +19,7 @@ const UserPage = () => {
   const PostExcerpt = ({ post }) => {
     return (
       <li className="blogItem">
-        <Link to={`/Blog-app/post/${post._id}`}>
+        <Link to={`/post/${post._id}`}>
           <h1 className="blogHeading">{post.title}</h1>
         </Link>
         <span>{post.user}</span>
