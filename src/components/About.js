@@ -24,19 +24,22 @@ const About = () => {
       <br />
       <br />
       <br />
-      <p>
+      <p style={{ marginBottom: 20 + "px" }}>
         This app was made with the MERN stack. All the resources can be found in
         the following repositories:
       </p>
       <p>
         <span className="bold">Fronend: </span>{" "}
-        <a href="#" className="link">
+        <a
+          href="https://github.com/SamAndao/Blog-app-frontend"
+          className="link"
+        >
           frontend repository
         </a>
       </p>
       <p>
         <span className="bold">Backend: </span>{" "}
-        <a href="#" className="link">
+        <a href="https://github.com/SamAndao/Blog-app-backend" className="link">
           backend repository
         </a>
       </p>
