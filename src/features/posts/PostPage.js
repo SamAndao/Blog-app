@@ -36,14 +36,14 @@ const PostPage = () => {
         );
 
       dispatch(setSuccess({ message: "Post has been deleted" }));
-      navigate("/Blog-app");
+      navigate("/");
     } catch (error) {
       console.log("An error has occured");
     }
   };
 
   const handleEdit = async () => {
-    navigate(`/Blog-app/edit-post/${id}`);
+    navigate(`/edit-post/${id}`);
   };
 
   if (isSuccess) {

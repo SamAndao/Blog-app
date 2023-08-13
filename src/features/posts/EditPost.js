@@ -46,7 +46,7 @@ const EditPost = () => {
         setFailed({ message: "An error has occured while updating post" })
       );
     dispatch(setSuccess({ message: "Your post has been updated" }));
-    navigate(`/Blog-app/post/${id}`);
+    navigate(`/post/${id}`);
   };
 
   if (isLoading) return <h1>Loading...</h1>;
@@ -90,7 +90,7 @@ const EditPost = () => {
       </form>
       <button
         className="btn delete margin-right"
-        onClick={() => navigate(`/Blog-app/post/${id}`)}
+        onClick={() => navigate(`/post/${id}`)}
       >
         Cancel
       </button>

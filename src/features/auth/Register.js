@@ -171,7 +171,7 @@ const Register = () => {
         dispatch(setToken({ accessToken }));
         dispatch(setCredentials({ username, userId }));
         setMessage("");
-        navigate("/Blog-app");
+        navigate("/");
       } catch (err) {
         setMessage("Register failed");
       }

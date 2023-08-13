@@ -25,10 +25,10 @@ const Search = () => {
   const PostExcerpt = ({ post }) => {
     return (
       <li className="blogItem">
-        <Link to={`/Blog-app/post/${post._id}`}>
+        <Link to={`/post/${post._id}`}>
           <h1 className="blogHeading">{post.title}</h1>
         </Link>
-        <Link to={`/Blog-app/user/${post.userId}`}>
+        <Link to={`/user/${post.userId}`}>
           <span>{post.user}</span>
         </Link>
         <h2>
@@ -50,7 +50,7 @@ const Search = () => {
   const UserExcerpt = ({ user }) => {
     return (
       <li className="users-item">
-        <Link to={`/Blog-app/user/${user._id}`}>
+        <Link to={`/user/${user._id}`}>
           <h3>{user.username}</h3>
         </Link>
       </li>

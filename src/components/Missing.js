@@ -5,7 +5,7 @@ const Missing = () => {
   return (
     <div className="missing">
       <h1>Page not found</h1>
-      <NavLink to="/Blog-app">
+      <NavLink to="/">
         <button className="btn">Back to home</button>
       </NavLink>
     </div>
