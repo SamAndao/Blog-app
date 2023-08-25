@@ -2,6 +2,8 @@
 
 Welcome to our MERN (MongoDB, Express, React, Node.js) stack user-posts application! This repository showcases a feature-rich web application that enables users to create, manage, and interact with posts. Our focus lies primarily on delivering a seamless frontend experience, leveraging cutting-edge technologies such as React, Redux, and RTK query to provide a user-friendly interface and efficient data management.
 
+[Click here to open the app.](https://blogit-pc7h.onrender.com/)
+
 # Features:
 
 ## User-Friendly:

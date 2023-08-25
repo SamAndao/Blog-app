@@ -48,7 +48,16 @@ const Home = () => {
         </ul>
       </>
     );
-  } else if (isLoading) content = <h1 key="loading">Loading...</h1>;
+  } else if (isLoading)
+    content = (
+      <div>
+        <h1 key="loading">Loading...</h1>
+        <p>
+          The page might take a while when it first loads. Thank you for your
+          patience.
+        </p>
+      </div>
+    );
   else content = <h1 key="error">Eror loading data</h1>;
 
   return content;
